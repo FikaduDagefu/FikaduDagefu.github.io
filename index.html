@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Alex Mercer | Senior Research Scientist Portfolio</title>
+    <title>Dr. Alex Mercer | Senior Research Scientist</title>
     <style>
+        /* Color Palette matching your provided code */
         :root {
             --primary: #1e3a8a;
             --primary-light: #eff6ff;
@@ -12,155 +13,352 @@
             --text-muted: #4b5563;
             --border: #e5e7eb;
             --bg: #f9fafb;
+            --bg-sidebar: #ffffff;
         }
+
         body {
             font-family: "Inter", system-ui, -apple-system, sans-serif;
-            color: var(--text);
             background-color: var(--bg);
+            color: var(--text);
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
+
+        /* Two-Column Grid Layout */
         .layout {
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 320px 1fr;
             min-height: 100vh;
         }
-        @media (max-width: 768px) {
+
+        @media (max-width: 800px) {
             .layout {
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Sidebar Styling */
         .sidebar {
-            background-color: #ffffff;
+            background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             padding: 3rem 2rem;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            align-items: center;
+            text-align: center;
         }
-        .profile-img-placeholder {
-            width: 120px;
-            height: 120px;
-            background-color: var(--primary-light);
+
+        /* Headshot Placeholder */
+        .headshot-container {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
+            background-color: var(--primary-light);
+            border: 2px solid var(--border);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
             color: var(--primary);
             font-weight: bold;
+            font-size: 0.9rem;
         }
+        
+        /* To add your real photo, replace the span text inside the container with:
+           <img src="your-photo.jpg" alt="Headshot" style="width:100%; height:100%; object-fit:cover;"> 
+        */
+
         .sidebar h1 {
             font-size: 1.8rem;
             color: var(--primary);
-            margin: 0;
+            margin: 0 0 0.5rem 0;
         }
-        .sidebar p {
+
+        .sidebar h2 {
+            font-size: 1rem;
+            font-weight: 500;
             color: var(--text-muted);
-            margin: 0;
-            font-size: 0.95rem;
+            margin: 0 0 1.5rem 0;
+            border-bottom: none;
         }
-        .content {
+
+        .contact-info {
+            width: 100%;
+            text-align: left;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+
+        /* Main Content Area */
+        .main-content {
             padding: 3rem 4rem;
             max-width: 900px;
         }
-        @media (max-width: 768px) {
-            .content {
+
+        @media (max-width: 800px) {
+            .main-content {
                 padding: 2rem 1.5rem;
             }
         }
-        section {
-            margin-bottom: 3rem;
+
+        /* Navigation Tabs */
+        nav {
+            display: flex;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 2.5rem;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
-        h2 {
+
+        nav button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            outline: none;
+            transition: color 0.2s;
+        }
+
+        nav button:hover {
             color: var(--primary);
-            font-size: 1.5rem;
-            border-bottom: 2px solid var(--primary-light);
-            padding-bottom: 0.5rem;
-            margin-top: 0;
         }
+
+        nav button.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Underline for active tab */
+        nav button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 3px 3px 0 0;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Content Typography */
+        h3 {
+            color: var(--primary);
+            margin-top: 2rem;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 0.3rem;
+            font-size: 1.4rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .pub-year {
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
         .publication-item {
             margin-bottom: 1.2rem;
             padding-left: 1rem;
             border-left: 3px solid var(--primary);
         }
+        
         .pub-title {
             font-weight: 600;
             color: var(--text);
         }
+        
         .pub-meta {
             font-size: 0.9rem;
             color: var(--text-muted);
         }
-        .btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 0.375rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-align: center;
-        }
-        .btn:hover {
-            background-color: #172554;
-        }
+
     </style>
 </head>
 <body>
+
     <div class="layout">
+        <!-- SIDEBAR -->
         <aside class="sidebar">
-            <div class="profile-img-placeholder">AM</div>
-            <div>
-                <h1>Dr. Alex Mercer</h1>
-                <p>Senior Research Scientist</p>
-                <p>Computational Physics Division</p>
-                <p><strong>National Laboratory</strong></p>
+            <div class="headshot-container">
+                <span>[Headshot]</span>
             </div>
-            <hr style="border: 0; border-top: 1px solid var(--border); width: 100%; margin: 0;">
-            <div>
-                <p><strong>Email:</strong> a.mercer@lab.gov</p>
-                <p><strong>Office:</strong> Bldg 402, Room 114</p>
+            <h1>Dr. Alex Mercer</h1>
+            <h2>Senior Research Scientist</h2>
+            
+            <div class="contact-info">
+                <p><strong>Organization:</strong> National Laboratory</p>
+                <p><strong>Division:</strong> Computational Physics</p>
+                <p><strong>Email:</strong> <a href="mailto:a.mercer@lab.gov">a.mercer@lab.gov</a></p>
+                <p><strong>Links:</strong> <a href="#">Google Scholar</a> | <a href="#">ORCID</a></p>
             </div>
-            <a href="#" class="btn">Download Curriculum Vitae</a>
         </aside>
 
-        <main class="content">
-            <section id="about">
-                <h2>Research Overview</h2>
-                <p>Dr. Alex Mercer has over 13 years of post-PhD leadership experience in computational science at national laboratory facilities. He directs large-scale research initiatives focusing on [insert primary mission/capability area, e.g., materials under extreme environments, quantum simulation]. He manages an active research group of staff scientists, postdocs, and technical specialists dedicated to delivering mission-critical national security solutions.</p>
-            </section>
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <!-- TABS -->
+            <nav>
+                <button class="tab-link active" onclick="openTab(event, 'Home')">Home</button>
+                <button class="tab-link" onclick="openTab(event, 'Publications')">Publications</button>
+                <button class="tab-link" onclick="openTab(event, 'Bio')">Bio</button>
+                <button class="tab-link" onclick="openTab(event, 'Personal')">Personal</button>
+            </nav>
 
-            <section id="experience">
-                <h2>Professional Experience</h2>
-                <div class="publication-item">
-                    <div class="pub-title">Senior Research Scientist | [National Laboratory]</div>
-                    <div class="pub-meta">2016 &mdash; Present</div>
-                </div>
-                <div class="publication-item">
-                    <div class="pub-title">Research Scientist | [National Laboratory]</div>
-                    <div class="pub-meta">2011 &mdash; 2016</div>
-                </div>
-                <div class="publication-item">
-                    <div class="pub-title">Postdoctoral Fellow | [Affiliation/Lab]</div>
-                    <div class="pub-meta">2009 &mdash; 2011</div>
-                </div>
-            </section>
+            <!-- HOME TAB -->
+            <div id="Home" class="tab-content active">
+                <h3>Research Overview</h3>
+                <p>Welcome to my academic and professional portfolio. I am a Senior Research Scientist at [National Laboratory] with over 13 years of post-PhD experience.</p>
+                <p>My primary research focuses on the intersection of high-performance computing, advanced materials characterization, and machine learning applications for national security challenges. I currently lead multi-disciplinary teams working to transition fundamental science into applied mission capabilities.</p>
+                
+                <h3>Current Focus Areas</h3>
+                <ul>
+                    <li><strong>Advanced Materials Modeling:</strong> Predictive modeling of material degradation in extreme environments.</li>
+                    <li><strong>High-Performance Computing:</strong> Scaling physics-based simulations for exascale architectures.</li>
+                    <li><strong>AI/ML Integration:</strong> Applying physics-informed neural networks to sparse experimental datasets.</li>
+                </ul>
+            </div>
 
-            <section id="publications">
-                <h2>Key Publications</h2>
+            <!-- PUBLICATIONS TAB -->
+            <div id="Publications" class="tab-content">
+                <h3>Selected Publications</h3>
+                <p><em>For a complete and up-to-date list, please visit my <a href="#">Google Scholar profile</a>.</em></p>
+                
                 <div class="publication-item">
-                    <div class="pub-title">"Scalable Quantum Simulations of Condensed Phase Systems"</div>
-                    <div class="pub-meta"><strong>Mercer, A.</strong>, et al. | <em>Physical Review Letters</em> (2022)</div>
+                    <div class="pub-title">"Exascale Modeling of Plasma-Material Interactions"</div>
+                    <div class="pub-meta"><strong>Mercer, A.</strong>, Doe, J., & Smith, R. | <em>Nature Computational Science</em> (2024)</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="pub-title">"Physics-Informed Neural Networks for Thermodynamic Predictions"</div>
+                    <div class="pub-meta">Lee, S. & <strong>Mercer, A.</strong> | <em>Journal of Computational Physics</em> (2022)</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="pub-title">"High-Throughput Screening of Refractory Alloys"</div>
+                    <div class="pub-meta"><strong>Mercer, A.</strong> et al. | <em>Physical Review Materials</em> (2018)</div>
+                </div>
+
+                <h3>Patents</h3>
+                <div class="publication-item">
+                    <div class="pub-title">"Method for Accelerated Simulation of Microstructural Evolution"</div>
+                    <div class="pub-meta"><strong>U.S. Patent No. 11,234,567</strong> | Issued: 2021</div>
+                </div>
+            </div>
+
+            <!-- BIO TAB -->
+            <div id="Bio" class="tab-content">
+                <h3>Professional Biography</h3>
+                <p>Dr. Alex Mercer joined [National Laboratory] as a Postdoctoral Fellow and rapidly transitioned to a staff role. Promoted to Senior Research Scientist, Dr. Mercer now serves as the Principal Investigator (PI) for several high-impact federal research portfolios.</p>
+                
+                <h3>Education</h3>
+                <div class="publication-item">
+                    <div class="pub-title">Ph.D. in Computational Physics</div>
+                    <div class="pub-meta">[University Name] | 2011</div>
                 </div>
                 <div class="publication-item">
-                    <div class="pub-title">"High-Flux Neutron Scattering Analysis of Advanced Reactor Components"</div>
-                    <div class="pub-meta">Smith, K. &amp; <strong>Mercer, A.</strong> | <em>Journal of Nuclear Materials</em> (2019)</div>
+                    <div class="pub-title">M.S. in Applied Mathematics</div>
+                    <div class="pub-meta">[University Name] | 2007</div>
                 </div>
-            </section>
+                <div class="publication-item">
+                    <div class="pub-title">B.S. in Physics</div>
+                    <div class="pub-meta">[University Name] | 2005</div>
+                </div>
+
+                <h3>Professional Service</h3>
+                <ul>
+                    <li>Review Editor, <em>Journal of Computational Physics</em></li>
+                    <li>Grant Reviewer, Department of Energy (DOE) Office of Science</li>
+                    <li>Member, American Physical Society (APS)</li>
+                </ul>
+            </div>
+
+            <!-- PERSONAL TAB -->
+            <div id="Personal" class="tab-content">
+                <h3>Beyond the Lab</h3>
+                <p>While my professional life is dedicated to computational science, I believe in maintaining a balanced life outside of the laboratory.</p>
+                
+                <ul>
+                    <li><strong>Mentorship:</strong> I actively volunteer with local STEM outreach programs, focusing on introducing high school students to coding and basic physics.</li>
+                    <li><strong>Hobbies:</strong> In my free time, I enjoy amateur astronomy and hiking, which provide a different perspective on the natural world.</li>
+                    <li><strong>Community:</strong> I am a proud resident of the local community and participate in regional science fairs as a guest judge.</li>
+                </ul>
+            </div>
+
         </main>
     </div>
+
+    <!-- JavaScript for Tabs -->
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all buttons
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            // Show the selected tab and add active class to the clicked button
+            document.getElementById(tabName).style.display = "block";
+            
+            // Slight delay to trigger CSS fade-in animation
+            setTimeout(() => {
+                document.getElementById(tabName).classList.add("active");
+            }, 10);
+            
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>
