@@ -1,29 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fikadu Tafes Dagefu | Home</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Alex Mercer | Senior Research Scientist Portfolio</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #eff6ff;
+            --text: #1f2937;
+            --text-muted: #4b5563;
+            --border: #e5e7eb;
+            --bg: #f9fafb;
+        }
+        body {
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            min-height: 100vh;
+        }
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        .sidebar {
+            background-color: #ffffff;
+            border-right: 1px solid var(--border);
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .profile-img-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        .sidebar h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        .sidebar p {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .content {
+            padding: 3rem 4rem;
+            max-width: 900px;
+        }
+        @media (max-width: 768px) {
+            .content {
+                padding: 2rem 1.5rem;
+            }
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        .publication-item {
+            margin-bottom: 1.2rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary);
+        }
+        .pub-title {
+            font-weight: 600;
+            color: var(--text);
+        }
+        .pub-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #172554;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Fikadu Tafes Dagefu</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-    </nav>
-  </header>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="profile-img-placeholder">AM</div>
+            <div>
+                <h1>Dr. Alex Mercer</h1>
+                <p>Senior Research Scientist</p>
+                <p>Computational Physics Division</p>
+                <p><strong>National Laboratory</strong></p>
+            </div>
+            <hr style="border: 0; border-top: 1px solid var(--border); width: 100%; margin: 0;">
+            <div>
+                <p><strong>Email:</strong> a.mercer@lab.gov</p>
+                <p><strong>Office:</strong> Bldg 402, Room 114</p>
+            </div>
+            <a href="#" class="btn">Download Curriculum Vitae</a>
+        </aside>
 
-  <main>
-    <h2>Welcome!</h2>
-    <p>This is my personal website hosted on GitHub Pages.</p>
-  </main>
+        <main class="content">
+            <section id="about">
+                <h2>Research Overview</h2>
+                <p>Dr. Alex Mercer has over 13 years of post-PhD leadership experience in computational science at national laboratory facilities. He directs large-scale research initiatives focusing on [insert primary mission/capability area, e.g., materials under extreme environments, quantum simulation]. He manages an active research group of staff scientists, postdocs, and technical specialists dedicated to delivering mission-critical national security solutions.</p>
+            </section>
 
-  <footer>
-    <p>© 2025 Fikadu Tafes Dagefu</p>
-  </footer>
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                <div class="publication-item">
+                    <div class="pub-title">Senior Research Scientist | [National Laboratory]</div>
+                    <div class="pub-meta">2016 &mdash; Present</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Research Scientist | [National Laboratory]</div>
+                    <div class="pub-meta">2011 &mdash; 2016</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">Postdoctoral Fellow | [Affiliation/Lab]</div>
+                    <div class="pub-meta">2009 &mdash; 2011</div>
+                </div>
+            </section>
+
+            <section id="publications">
+                <h2>Key Publications</h2>
+                <div class="publication-item">
+                    <div class="pub-title">"Scalable Quantum Simulations of Condensed Phase Systems"</div>
+                    <div class="pub-meta"><strong>Mercer, A.</strong>, et al. | <em>Physical Review Letters</em> (2022)</div>
+                </div>
+                <div class="publication-item">
+                    <div class="pub-title">"High-Flux Neutron Scattering Analysis of Advanced Reactor Components"</div>
+                    <div class="pub-meta">Smith, K. &amp; <strong>Mercer, A.</strong> | <em>Journal of Nuclear Materials</em> (2019)</div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
