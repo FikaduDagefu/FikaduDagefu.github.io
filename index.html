@@ -15,7 +15,6 @@
             --bg: #f9fafb;
             --bg-sidebar: #ffffff;
         }
-
         body {
             font-family: "Inter", system-ui, -apple-system, sans-serif;
             background-color: var(--bg);
@@ -24,20 +23,17 @@
             padding: 0;
             line-height: 1.6;
         }
-
         /* Two-Column Grid Layout */
         .layout {
             display: grid;
             grid-template-columns: 320px 1fr;
             min-height: 100vh;
         }
-
         @media (max-width: 800px) {
             .layout {
                 grid-template-columns: 1fr;
             }
         }
-
         /* Sidebar Styling */
         .sidebar {
             background-color: var(--bg-sidebar);
@@ -48,7 +44,6 @@
             align-items: center;
             text-align: center;
         }
-
         /* Headshot Placeholder */
         .headshot-container {
             width: 150px;
@@ -69,13 +64,11 @@
         /* To add your real photo, replace the span text inside the container with:
            <img src="your-photo.jpg" alt="Headshot" style="width:100%; height:100%; object-fit:cover;"> 
         */
-
         .sidebar h1 {
             font-size: 1.8rem;
             color: var(--primary);
             margin: 0 0 0.5rem 0;
         }
-
         .sidebar h2 {
             font-size: 1rem;
             font-weight: 500;
@@ -83,7 +76,6 @@
             margin: 0 0 1.5rem 0;
             border-bottom: none;
         }
-
         .contact-info {
             width: 100%;
             text-align: left;
@@ -93,23 +85,19 @@
             font-size: 0.95rem;
             color: var(--text-muted);
         }
-
         .contact-info p {
             margin: 0.5rem 0;
         }
-
         /* Main Content Area */
         .main-content {
             padding: 3rem 4rem;
             max-width: 900px;
         }
-
         @media (max-width: 800px) {
             .main-content {
                 padding: 2rem 1.5rem;
             }
         }
-
         /* Navigation Tabs */
         nav {
             display: flex;
@@ -118,7 +106,6 @@
             gap: 1.5rem;
             flex-wrap: wrap;
         }
-
         nav button {
             background: none;
             border: none;
@@ -131,16 +118,13 @@
             outline: none;
             transition: color 0.2s;
         }
-
         nav button:hover {
             color: var(--primary);
         }
-
         nav button.active {
             color: var(--primary);
             font-weight: 600;
         }
-
         /* Underline for active tab */
         nav button.active::after {
             content: '';
@@ -152,22 +136,18 @@
             background-color: var(--primary);
             border-radius: 3px 3px 0 0;
         }
-
         /* Tab Content */
         .tab-content {
             display: none;
             animation: fadeIn 0.3s ease-in-out;
         }
-
         .tab-content.active {
             display: block;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         /* Content Typography */
         h3 {
             color: var(--primary);
@@ -176,21 +156,17 @@
             padding-bottom: 0.3rem;
             font-size: 1.4rem;
         }
-
         a {
             color: var(--primary);
             text-decoration: none;
             font-weight: 500;
         }
-
         a:hover {
             text-decoration: underline;
         }
-
         ul {
             padding-left: 1.5rem;
         }
-
         li {
             margin-bottom: 0.8rem;
         }
@@ -199,7 +175,6 @@
             font-weight: 600;
             color: var(--text-muted);
         }
-
         .publication-item {
             margin-bottom: 1.2rem;
             padding-left: 1rem;
@@ -215,11 +190,9 @@
             font-size: 0.9rem;
             color: var(--text-muted);
         }
-
     </style>
 </head>
 <body>
-
     <div class="layout">
         <!-- SIDEBAR -->
         <aside class="sidebar">
@@ -242,8 +215,6 @@
             <nav>
                 <button class="tab-link active" onclick="openTab(event, 'Home')">Home</button>
                 <button class="tab-link" onclick="openTab(event, 'Publications')">Publications</button>
-                <button class="tab-link" onclick="openTab(event, 'Bio')">Bio</button>
-                <button class="tab-link" onclick="openTab(event, 'Personal')">Personal</button>
             </nav>
 
             <!-- HOME TAB -->
@@ -259,83 +230,35 @@
                 </ul>
             </div>
 
-            <!-- <!-- PUBLICATIONS TAB -->
-<div id="Publications" class="tab-content">
-    <h3>Journal Articles</h3>
-    <p><em>For a complete and up-to-date list, please visit my <a href="https://scholar.google.com/citations?user=JyjZ3EMAAAAJ&hl=en" target="_blank">Google Scholar</a>.</em></p>
-    
-    <div class="publication-item">
-        [1] <strong>J. Kong</strong>, T. Moore, and F. Dagefu, "Simultaneous Multi-Modal Covert Communications: Analysis and Optimization," <em>IEEE Transactions on Wireless Communications (submitted, January 2026)</em>, 2024.
-    </div>
+            <!-- PUBLICATIONS TAB -->
+            <div id="Publications" class="tab-content">
+                <h3>Journal Articles</h3>
+                <p><em>For a complete and up-to-date list, please visit my <a href="https://scholar.google.com/citations?user=JyjZ3EMAAAAJ&hl=en" target="_blank">Google Scholar</a>.</em></p>
+                
+                <div class="publication-item">
+                    [1] <strong>J. Kong</strong>, T. Moore, and F. Dagefu, "Simultaneous Multi-Modal Covert Communications: Analysis and Optimization," <em>IEEE Transactions on Wireless Communications (submitted, January 2026)</em>, 2024.
+                </div>
+                <div class="publication-item">
+                    [2] K. F. Haque, <strong>J. Kong</strong>, T. Moore, K. Chan, F. Restuccia, F. Dagefu, "DECOR: Multi-Modal Decentralized Cluster-based Energy Efficient Covert Routing in HetNets," <em>IEEE Transactions on Information Forensics and Security</em>, 2022.
+                </div>
+                <div class="publication-item">
+                    [3] <strong>B. Kim</strong>, J. Kong, T. Moore, and F. Dagefu, "Deep Reinforcement Learning Based Robust Routing for Multi-flow Heterogeneous Wireless Networks," <em>IEEE Transactions on Information Forensics and Security</em>, 2018.
+                </div>
 
-    <div class="publication-item">
-        [2] K. F. Haque <strong>, J. Kong, T. Moore, K. Chan, F. Restuccia, F. Dagefu, "DECOR: Multi-Modal Decentralized Cluster-based Energy Efficient Covert Routing in HetNets," <em>IEEE Transactions on Information Forensics and Security</em>, 2022.
-    </div>
-
-    <div class="publication-item">
-        [3]  <strong>B. Kim</strong>, J. Kong, T. Moore, and F. Dagefu, "Deep Reinforcement Learning Based Robust Routing for Multi-flow Heterogeneous Wireless Networks," <em>IEEE Transactions on Information Forensics and Security</em>, 2018.
-    </div>
-</div>
                 <h3>Patents</h3>
                 <div class="publication-item">
                     <div class="pub-title">"Active Matching Network Design for Electrically Small Resonant Antennas"</div>
                     <div class="pub-meta"><strong>U.S. Patent No. 11476837 </strong> | Issued: 2021</div>
                 </div>
-
                 <div class="publication-item">
                     <div class="pub-title">"Covert Communication Technique for Intelligent Reflecting Surface-Assisted Wireless Networks"</div>
                     <div class="pub-meta"><strong>U.S. Patent No. 11750319 </strong> | Issued: 2022</div>
                 </div>
-
                 <div class="publication-item">
                     <div class="pub-title">"Covert Communication Technique for Intelligent Reflecting Surface-Assisted Wireless Networks"</div>
                     <div class="pub-meta"><strong>U.S. Patent No. 11750319 </strong> | Issued: 2022</div>
                 </div>
-            
             </div>
-
-            <!-- BIO TAB -->
-            <div id="Bio" class="tab-content">
-                <h3>Professional Biography</h3>
-                <p>I serve as a Team Leader and Senior Research Scientist at the U.S. Army Research Laboratory (ARL). Broadly, my research interests lie in applied electromagnetics, wireless communications, and sensing, with a recent emphasis on developing enabling technologies for intelligent, self-managing wireless networks.
-                    I have led several intramural research programs and collaborated extensively with academia and other government agencies.
-                    To date, I have authored or co-authored over 120 peer-reviewed publications and hold six patents. Additionally, I regularly mentor student interns, postdocs, and visiting scholars on my research team at ARL.</p>
-                    
-                
-                <h3>Education</h3>
-                <div class="publication-item">
-                    <div class="pub-title">Ph.D. in Electrical Engineering</div>
-                    <div class="pub-meta">[University of Michigan] | 2012</div>
-                </div>
-                <div class="publication-item">
-                    <div class="pub-title">M.S. in Electrical Engineering</div>
-                    <div class="pub-meta">[University of Michigan] | 2009</div>
-                </div>
-                <div class="publication-item">
-                    <div class="pub-title">B.S. in Electrical Engineering</div>
-                    <div class="pub-meta">[University of Texas at Austin] | 2007</div>
-                </div>
-
-                <h3>Professional Service</h3>
-                <ul>
-                    <li>Associate Editor, <em>IEEE Antennas and Propagation Magazine</em></li>
-                    <li>Associate Editor, <em>IEEE Antennas and Wireless Propagation Letters</em></li>
-                    <li>Associate Editor, <em>Radio Science Letters</em></li>
-                </ul>
-            </div>
-
-            <!-- PERSONAL TAB -->
-            <div id="Personal" class="tab-content">
-                <h3>Beyond the Lab</h3>
-                <p>Under construction.</p>
-                
-                <ul>
-                    <li><strong>Mentorship:</strong> Under construction</li>
-                    <li><strong>Hobbies:</strong> Under construction.</li>
-                    <li><strong>Community:</strong> Under construction.</li>
-                </ul>
-            </div>
-
         </main>
     </div>
 
