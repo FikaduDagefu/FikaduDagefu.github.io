@@ -147,18 +147,13 @@
         /* Content Typography */
         h3 {
             color: var(--primary);
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             border-bottom: 2px solid var(--primary-light);
             padding-bottom: 0.3rem;
             font-size: 1.4rem;
         }
-        h4 {
-            color: var(--text);
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-            border-bottom: 1px dashed var(--border);
-            padding-bottom: 0.2rem;
+        h3:first-child {
+            margin-top: 0;
         }
         a {
             color: var(--primary);
@@ -190,6 +185,7 @@
     </style>
 </head>
 <body>
+
     <div class="layout">
         <!-- SIDEBAR -->
         <aside class="sidebar">
@@ -204,6 +200,7 @@
                 <p><strong>Links:</strong> <a href="https://scholar.google.com/citations?user=JyjZ3EMAAAAJ&hl=en" target="_blank">Google Scholar</a> | <a href="https://www.linkedin.com/in/fikadu-dagefu-991a98a" target="_blank">LinkedIn</a></p>
             </div>
         </aside>
+
         <!-- MAIN CONTENT -->
         <main class="main-content">
             
@@ -212,6 +209,7 @@
                 <button class="tab-link active" onclick="openTab(event, 'Home')">Home</button>
                 <button class="tab-link" onclick="openTab(event, 'Publications')">Publications</button>
             </nav>
+
             <!-- HOME TAB -->
             <div id="Home" class="tab-content active">
                 <h3>Research Overview</h3>
@@ -224,11 +222,11 @@
                     <li><strong>Wave Propagation and Channel Modeling:</strong> RF wave propagation modeling, Optical channel modeling, Empirical models</li>
                 </ul>
             </div>
+
             <!-- PUBLICATIONS TAB -->
             <div id="Publications" class="tab-content">
-                <h3>Journal & Conference Articles</h3>
-                
-                <h4>2026</h4>
+
+                <h3>Journal Articles</h3>
                 <div class="publication-item">
                     [1] J. Kong, T. Moore, and F. Dagefu, "Simultaneous Multi-Modal Covert Communications: Analysis and Optimization," <em>IEEE Transactions on Wireless Communications</em>, (submitted, January 2026).
                 </div>
@@ -242,66 +240,68 @@
                     [4] J. H. Kong, T. Moore, and F.T. Dagefu, "Covert Multi-Hop Communications for Heterogeneous Networks With Multiple Wardens," <em>IEEE TIFS, 2026 (submitted).</em>
                 </div>
                 <div class="publication-item">
-                    [5] S. Johnson, R. Aggarwal, M. Kasher, P. Spasojevic, J. Kong, B. Kim, J. Choi, and F. T. Dagefu, "Covert Multi-Hop LEO Routing Against Cyclic Feature Detectors via Controlled Delays," <em>IEEE Int. Conf. Comput. Commun. (INFOCOM) Workshops: Resilient and Intelligent Non-Terrestrial Networks, Tokyo, Japan, May 18-21, 2026.</em>
+                    [5] J. Kong, T. Moore, and F. T. Dagefu, "Joint Routing and Resource Allocation in Covert Multi-Flow Heterogeneous Networks," <em>IEEE Communications Letters, 2025</em>.
                 </div>
                 <div class="publication-item">
-                    [6] S. Saha, R. Aggarwal, F. T. Dagefu, J. Kong, J. Choi, B. Kim, and P. Spasojevic, "Covert Routing with DSSS Signaling Against Cycle Detectors," <em>IEEE Wireless Communications and Networking Conf., Kuala Lumpur, Malaysia, Apr. 13-16, 2026.</em>
+                    [6] J. H. Kong and F. T. Dagefu, "Opportunistic Jamming for Covert Communications: Ginibre Point Process Modeling and Analysis," <em>IEEE Commun. Lett., vol 29, pp. 1654-1658, Jul. 2025.</em>
                 </div>
                 <div class="publication-item">
-                    [7] J. Choi and F. T. Dagefu, "Cyclostationary Signature Reduction with an FM-DSSS Signal via RIS," <em>2026 IEEE APS/URSI (Accepted).</em>
+                    [7] Z Zhao, Y Ming, A Swami, K Chan, F Dagefu, S Segarra, "Generalizing Biased Backpressure Routing and Scheduling to Wireless Multi-hop Networks with Advanced Air-interfaces," <em>arXiv preprint arXiv:2504.21721, 2025.</em>
                 </div>
                 <div class="publication-item">
-                    [8] Md Nahid H. Shuvo, M. Hossain, A. Mallik, J. N. Twigg, and F. T. Dagefu, "FLARE: A Wireless Side-Channel Fingerprinting Attack on Federated Learning," <em>2026 IEEE INFOCOM (Accepted).</em>
+                    [8] Z Zhao, Y Ming, A Swami, K Chan, F Dagefu, S Segarra, "Link-Sharing Backpressure Routing In Wireless Multi-Hop Networks," <em>arXiv preprint arXiv:2512.09902, 2025.</em>
+                </div>
+
+                <h3>Conference Publications</h3>
+                <div class="publication-item">
+                    [1] S. Johnson, R. Aggarwal, M. Kasher, P. Spasojevic, J. Kong, B. Kim, J. Choi, and F. T. Dagefu, "Covert Multi-Hop LEO Routing Against Cyclic Feature Detectors via Controlled Delays," <em>IEEE Int. Conf. Comput. Commun. (INFOCOM) Workshops: Resilient and Intelligent Non-Terrestrial Networks, Tokyo, Japan, May 18-21, 2026.</em>
                 </div>
                 <div class="publication-item">
-                    [9] A. Gillani, B. Lorenzo, M. Ghaderi, F. T. Dagefu, J. Kong, and D. Goeckel, "Optimal Routing and Link Configuration for Covert HetNets in the Presence of a Jammer," <em>2026 IEEE VTC (Accepted).</em>
+                    [2] S. Saha, R. Aggarwal, F. T. Dagefu, J. Kong, J. Choi, B. Kim, and P. Spasojevic, "Covert Routing with DSSS Signaling Against Cycle Detectors," <em>IEEE Wireless Communications and Networking Conf., Kuala Lumpur, Malaysia, Apr. 13-16, 2026.</em>
                 </div>
                 <div class="publication-item">
-                    [10] Y. Wu, X. Xia, B. Lorenzo, D. Goeckel, and F. Dagefu, "Covertness Recovery in Multi-RAT UAV Swarms Under Post-Detection Threat Escalation via Lifelong Reinforcement Learning," <em>2026 IEEE VTC (Accepted).</em>
-                </div>
-                <h4>2025</h4>
-                <div class="publication-item">
-                    [1] J. Kong, T. Moore, and F. T. Dagefu, "Joint Routing and Resource Allocation in Covert Multi-Flow Heterogeneous Networks," <em>IEEE Communications Letters, 2025</em>.
+                    [3] J. Choi and F. T. Dagefu, "Cyclostationary Signature Reduction with an FM-DSSS Signal via RIS," <em>2026 IEEE APS/URSI (Accepted).</em>
                 </div>
                 <div class="publication-item">
-                    [2] J. H. Kong and F. T. Dagefu, "Opportunistic Jamming for Covert Communications: Ginibre Point Process Modeling and Analysis," <em>IEEE Commun. Lett., vol 29, pp. 1654-1658, Jul. 2025.</em>
+                    [4] Md Nahid H. Shuvo, M. Hossain, A. Mallik, J. N. Twigg, and F. T. Dagefu, "FLARE: A Wireless Side-Channel Fingerprinting Attack on Federated Learning," <em>2026 IEEE INFOCOM (Accepted).</em>
                 </div>
                 <div class="publication-item">
-                    [3] Z Zhao, Y Ming, A Swami, K Chan, F Dagefu, S Segarra, "Generalizing Biased Backpressure Routing and Scheduling to Wireless Multi-hop Networks with Advanced Air-interfaces," <em>arXiv preprint arXiv:2504.21721, 2025.</em>
+                    [5] A. Gillani, B. Lorenzo, M. Ghaderi, F. T. Dagefu, J. Kong, and D. Goeckel, "Optimal Routing and Link Configuration for Covert HetNets in the Presence of a Jammer," <em>2026 IEEE VTC (Accepted).</em>
                 </div>
                 <div class="publication-item">
-                    [4] Z Zhao, Y Ming, A Swami, K Chan, F Dagefu, S Segarra, "Link-Sharing Backpressure Routing In Wireless Multi-Hop Networks," <em>arXiv preprint arXiv:2512.09902, 2025.</em>
+                    [6] Y. Wu, X. Xia, B. Lorenzo, D. Goeckel, and F. Dagefu, "Covertness Recovery in Multi-RAT UAV Swarms Under Post-Detection Threat Escalation via Lifelong Reinforcement Learning," <em>2026 IEEE VTC (Accepted).</em>
                 </div>
                 <div class="publication-item">
-                    [5] B. Kim, J. Kong, T. J. Moore, and F. T. Dagefu, "Deep Reinforcement Learning Based Routing for Heterogeneous Multi-Hop Wireless Networks," <em>in Proc. IEEE Military Commun. Conf., Los Angeles, CA, USA, Oct. 6-10, 2025.</em>
+                    [7] B. Kim, J. Kong, T. J. Moore, and F. T. Dagefu, "Deep Reinforcement Learning Based Routing for Heterogeneous Multi-Hop Wireless Networks," <em>in Proc. IEEE Military Commun. Conf., Los Angeles, CA, USA, Oct. 6-10, 2025.</em>
                 </div>
                 <div class="publication-item">
-                    [6] K. Foysal Haque, J. Kong, T. Moore, F. Restuccia, F. T. Dagefu, "DEER: Simultaneous Multi-Modal Decentralized Energy Efficient Covert Routing," <em>2025 IEEE Wireless Communications and Networking Conference.</em>
+                    [8] K. Foysal Haque, J. Kong, T. Moore, F. Restuccia, F. T. Dagefu, "DEER: Simultaneous Multi-Modal Decentralized Energy Efficient Covert Routing," <em>2025 IEEE Wireless Communications and Networking Conference.</em>
                 </div>
                 <div class="publication-item">
-                    [7] B. Kim, J. Kong, T. J. Moore, F. T. Dagefu, "Reinforcement Learning for Covert Heterogeneous Wireless Network Routing with a Threat Region," <em>2025 IEEE 22nd Consumer Communications & Networking Conference (CCNC).</em>
+                    [9] B. Kim, J. Kong, T. J. Moore, F. T. Dagefu, "Reinforcement Learning for Covert Heterogeneous Wireless Network Routing with a Threat Region," <em>2025 IEEE 22nd Consumer Communications & Networking Conference (CCNC).</em>
                 </div>
                 <div class="publication-item">
-                    [8] R. Aggarwal, F. T. Dagefu, J. Kong, J. Choi, B. Kim, and P. Spasojevic, "On Covertness of DSSS Against Energy and Cycle Detectors under Link QoS Requirements," <em>IEEE Veh. Technol. Conf., Oslo, Norway, Jun. 17-20, 2025, presented. [Outcome of summer Internship at ARL]</em>
+                    [10] R. Aggarwal, F. T. Dagefu, J. Kong, J. Choi, B. Kim, and P. Spasojevic, "On Covertness of DSSS Against Energy and Cycle Detectors under Link QoS Requirements," <em>IEEE Veh. Technol. Conf., Oslo, Norway, Jun. 17-20, 2025, presented. [Outcome of summer Internship at ARL]</em>
                 </div>
                 <div class="publication-item">
-                    [9] J. Choi and F. T. Dagefu, "Analysis of Passive Jamming on MIMO Communications via Intelligent Reflecting Surfaces," <em>in 2025 IEEE APS/URSI, Ottawa, CA.</em>
+                    [11] J. Choi and F. T. Dagefu, "Analysis of Passive Jamming on MIMO Communications via Intelligent Reflecting Surfaces," <em>in 2025 IEEE APS/URSI, Ottawa, CA.</em>
                 </div>
                 <div class="publication-item">
-                    [10] A. Roknilamouki, F. T. Dagefu, E. Ekici, B. Kim, J. H. Kong, T. Moore, Y. Sun, N. Shroff, "Safe and Reliable Deep Reinforcement Learning for Covert Routing," <em>2025 IEEE 22nd MASS (Invited).</em>
+                    [12] A. Roknilamouki, F. T. Dagefu, E. Ekici, B. Kim, J. H. Kong, T. Moore, Y. Sun, N. Shroff, "Safe and Reliable Deep Reinforcement Learning for Covert Routing," <em>2025 IEEE 22nd MASS (Invited).</em>
                 </div>
                 <div class="publication-item">
-                    [11] A. Gillani, B. Lorenzo, M. Ghaderi, F. T. Dagefu, and D. Goeckel, "Optimal Link Configuration for Covert Heterogeneous Wireless Networks with Power Constraints," <em>2025 59th CISS.</em>
+                    [13] A. Gillani, B. Lorenzo, M. Ghaderi, F. T. Dagefu, and D. Goeckel, "Optimal Link Configuration for Covert Heterogeneous Wireless Networks with Power Constraints," <em>2025 59th CISS.</em>
                 </div>
                 <div class="publication-item">
-                    [12] A. Beyer, J. N. Twigg, N. Chopra, and F. T. Dagefu, "Accelerating Distributed Beamforming with the Frank-Wolfe Algorithm," <em>2025 IEEE 101st VTC2025-Spring.</em>
+                    [14] A. Beyer, J. N. Twigg, N. Chopra, and F. T. Dagefu, "Accelerating Distributed Beamforming with the Frank-Wolfe Algorithm," <em>2025 IEEE 101st VTC2025-Spring.</em>
                 </div>
                 <div class="publication-item">
-                    [13] R. Kozick and F. T. Dagefu, "Multiport Antenna Matching Network Design and Circuit Simplification," <em>in IEEE APS/URSI, Ottawa, CA.</em>
+                    [15] R. Kozick and F. T. Dagefu, "Multiport Antenna Matching Network Design and Circuit Simplification," <em>in IEEE APS/URSI, Ottawa, CA.</em>
                 </div>
                 <div class="publication-item">
-                    [14] F. G. Tisdall, S. B. Johnson, M. Kasher, F. T. Dagefu, J. Choi, J. Kong, B. Kim, and P. Spasojevic, "IRS-Enabled mmWave Signal Obfuscation for LEO Nanosatellites," <em>IEEE Military Commun. Conf., Los Angeles, CA, USA, Oct. 6-10, 2025 (Best Demo Paper Winner).</em>
+                    [16] F. G. Tisdall, S. B. Johnson, M. Kasher, F. T. Dagefu, J. Choi, J. Kong, B. Kim, and P. Spasojevic, "IRS-Enabled mmWave Signal Obfuscation for LEO Nanosatellites," <em>IEEE Military Commun. Conf., Los Angeles, CA, USA, Oct. 6-10, 2025 (Best Demo Paper Winner).</em>
                 </div>
+
                 <h3>Patents</h3>
                 <div class="publication-item">
                     <div class="pub-title">"Covert communication technique for intelligent reflecting surface-assisted wireless networks with a friendly jammer"</div>
@@ -323,9 +323,11 @@
                     <div class="pub-title">"Active Matching Network Design for Electrically Small Resonant Antennas"</div>
                     <div class="pub-meta">U.S. Patent No. 11476837 | Issued: 2021</div>
                 </div>
+
             </div>
         </main>
     </div>
+
     <!-- JavaScript for Tabs -->
     <script>
         function openTab(evt, tabName) {
