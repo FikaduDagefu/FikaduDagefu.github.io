@@ -204,7 +204,6 @@
                 <p><strong>Links:</strong> <a href="https://scholar.google.com/citations?user=JyjZ3EMAAAAJ&hl=en" target="_blank">Google Scholar</a> | <a href="https://www.linkedin.com/in/fikadu-dagefu-991a98a" target="_blank">LinkedIn</a></p>
             </div>
         </aside>
-
         <!-- MAIN CONTENT -->
         <main class="main-content">
             
@@ -213,7 +212,6 @@
                 <button class="tab-link active" onclick="openTab(event, 'Home')">Home</button>
                 <button class="tab-link" onclick="openTab(event, 'Publications')">Publications</button>
             </nav>
-
             <!-- HOME TAB -->
             <div id="Home" class="tab-content active">
                 <h3>Research Overview</h3>
@@ -226,7 +224,6 @@
                     <li><strong>Wave Propagation and Channel Modeling:</strong> RF wave propagation modeling, Optical channel modeling, Empirical models</li>
                 </ul>
             </div>
-
             <!-- PUBLICATIONS TAB -->
             <div id="Publications" class="tab-content">
                 <h3>Journal & Conference Articles</h3>
@@ -262,7 +259,6 @@
                 <div class="publication-item">
                     [10] Y. Wu, X. Xia, B. Lorenzo, D. Goeckel, and F. Dagefu, "Covertness Recovery in Multi-RAT UAV Swarms Under Post-Detection Threat Escalation via Lifelong Reinforcement Learning," <em>2026 IEEE VTC (accepted, May 15 2026).</em>
                 </div>
-
                 <h4>2025</h4>
                 <div class="publication-item">
                     [1] J. Kong, T. Moore, and F. T. Dagefu, "Joint Routing and Resource Allocation in Covert Multi-Flow Heterogeneous Networks," <em>IEEE Communications Letters, 2025</em>.
@@ -306,7 +302,6 @@
                 <div class="publication-item">
                     [14] F. G. Tisdall, S. B. Johnson, M. Kasher, F. T. Dagefu, J. Choi, J. Kong, B. Kim, and P. Spasojevic, "IRS-Enabled mmWave Signal Obfuscation for LEO Nanosatellites," <em>IEEE Military Commun. Conf., Los Angeles, CA, USA, Oct. 6-10, 2025 (Best Demo Paper Winner).</em>
                 </div>
-
                 <h3>Patents</h3>
                 <div class="publication-item">
                     <div class="pub-title">"Covert communication technique for intelligent reflecting surface-assisted wireless networks with a friendly jammer"</div>
@@ -331,25 +326,24 @@
             </div>
         </main>
     </div>
-
     <!-- JavaScript for Tabs -->
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
-
-            // Hide all elements with class="tab-content"
+            
+            // Hide all tab content
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
-
-            // Remove the class "active" from all buttons with class="tab-link"
+            
+            // Remove the class "active" from all tab-link buttons
             tablinks = document.getElementsByClassName("tab-link");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
+            
+            // Show the current tab and add an "active" class to the button that opened the tab
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
         }
