@@ -198,7 +198,6 @@
             </div>
             <h1>Fikadu Dagefu</h1>
             <h2>Senior Research Scientist</h2>
-            
             <div class="contact-info">
                 <p><strong>Organization:</strong> US Army Research Laboratory</p>
                 <p><strong>Links:</strong> <a href="https://scholar.google.com/citations?user=JyjZ3EMAAAAJ&hl=en" target="_blank">Google Scholar</a> | <a href="https://www.linkedin.com/in/fikadu-dagefu-991a98a" target="_blank">LinkedIn</a></p>
@@ -207,7 +206,6 @@
 
         <!-- MAIN CONTENT -->
         <main class="main-content">
-            
             <!-- TABS -->
             <nav>
                 <button class="tab-link active" onclick="openTab(event, 'Home')">Home</button>
@@ -230,7 +228,6 @@
             <!-- PUBLICATIONS TAB -->
             <div id="Publications" class="tab-content">
                 <h3>Journal Articles</h3>
-                
                 <h4>2026</h4>
                 <div class="publication-item">
                     [1] J. Kong, T. Moore, and F. Dagefu, "Simultaneous Multi-Modal Covert Communications: Analysis and Optimization," <em>IEEE Transactions on Wireless Communications</em>, (submitted, January 2026).
@@ -365,7 +362,6 @@
                 </div>
 
                 <hr style="margin-top: 3rem; border: none; border-top: 1px dashed var(--border);">
-
                 <h3 style="margin-top: 1.5rem;">Conference Publications</h3>
                 
                 <h4>2026</h4>
@@ -618,7 +614,6 @@
                 </div>
 
                 <hr style="margin-top: 3rem; border: none; border-top: 1px dashed var(--border);">
-                
                 <h3 style="margin-top: 1.5rem;">Patents</h3>
                 <div class="publication-item">
                     <div class="pub-title">"Covert communication technique for intelligent reflecting surface-assisted wireless networks with a friendly jammer"</div>
@@ -640,7 +635,7 @@
                     <div class="pub-title">"Active Matching Network Design for Electrically Small Resonant Antennas"</div>
                     <div class="pub-meta">U.S. Patent No. 11476837 | Issued: 2021</div>
                 </div>
-                 <div class="publication-item">
+                <div class="publication-item">
                     <div class="pub-title">"Active matching network design for electrically small resonant antennas"</div>
                     <div class="pub-meta">U.S. Patent 16895490, issued in 2022.</div>
                 </div>
@@ -651,23 +646,23 @@
     <!-- JavaScript for Tabs -->
     <script>
         function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
+            var i;
+            var tabcontent = document.getElementsByClassName("tab-content");
+            var tablinks = document.getElementsByClassName("tab-link");
             
             // Hide all tab content
-            tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
             }
             
             // Remove the class "active" from all tab-link buttons
-            tablinks = document.getElementsByClassName("tab-link");
             for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                tablinks[i].classList.remove("active");
             }
             
             // Show the current tab and add an "active" class to the button that opened the tab
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
     </script>
 </body>
