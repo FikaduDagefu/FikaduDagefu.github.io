@@ -15,7 +15,6 @@
             --bg: #f9fafb;
             --bg-sidebar: #ffffff;
         }
-
         body {
             font-family: "Inter", system-ui, -apple-system, sans-serif;
             background-color: var(--bg);
@@ -24,20 +23,17 @@
             padding: 0;
             line-height: 1.6;
         }
-
         /* Two-Column Grid Layout */
         .layout {
             display: grid;
             grid-template-columns: 320px 1fr;
             min-height: 100vh;
         }
-
         @media (max-width: 800px) {
             .layout {
                 grid-template-columns: 1fr;
             }
         }
-
         /* Sidebar Styling */
         .sidebar {
             background-color: var(--bg-sidebar);
@@ -48,7 +44,6 @@
             align-items: center;
             text-align: center;
         }
-
         /* Headshot Placeholder */
         .headshot-container {
             width: 180px;
@@ -65,13 +60,11 @@
             font-weight: bold;
             font-size: 0.9rem;
         }
-
         .sidebar h1 {
             font-size: 1.8rem;
             color: var(--primary);
             margin: 0 0 0.5rem 0;
         }
-
         .sidebar h2 {
             font-size: 1rem;
             font-weight: 500;
@@ -79,7 +72,6 @@
             margin: 0 0 1.5rem 0;
             border-bottom: none;
         }
-
         .contact-info {
             width: 100%;
             text-align: left;
@@ -89,23 +81,19 @@
             font-size: 0.95rem;
             color: var(--text-muted);
         }
-
         .contact-info p {
             margin: 0.5rem 0;
         }
-
         /* Main Content Area */
         .main-content {
             padding: 3rem 4rem;
             max-width: 900px;
         }
-
         @media (max-width: 800px) {
             .main-content {
                 padding: 2rem 1.5rem;
             }
         }
-
         /* Navigation Tabs */
         nav {
             display: flex;
@@ -114,7 +102,6 @@
             gap: 1.5rem;
             flex-wrap: wrap;
         }
-
         nav button {
             background: none;
             border: none;
@@ -127,16 +114,13 @@
             outline: none;
             transition: color 0.2s;
         }
-
         nav button:hover {
             color: var(--primary);
         }
-
         nav button.active {
             color: var(--primary);
             font-weight: 600;
         }
-
         /* Underline for active tab */
         nav button.active::after {
             content: '';
@@ -148,22 +132,18 @@
             background-color: var(--primary);
             border-radius: 3px 3px 0 0;
         }
-
         /* Tab Content */
         .tab-content {
             display: none;
             animation: fadeIn 0.3s ease-in-out;
         }
-
         .tab-content.active {
             display: block;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         /* Content Typography */
         h3 {
             color: var(--primary);
@@ -172,7 +152,6 @@
             padding-bottom: 0.3rem;
             font-size: 1.4rem;
         }
-
         h4 {
             color: var(--text);
             margin-top: 1.5rem;
@@ -181,36 +160,29 @@
             border-bottom: 1px dashed var(--border);
             padding-bottom: 0.2rem;
         }
-
         a {
             color: var(--primary);
             text-decoration: none;
             font-weight: 500;
         }
-
         a:hover {
             text-decoration: underline;
         }
-
         ul {
             padding-left: 1.5rem;
         }
-
         li {
             margin-bottom: 0.8rem;
         }
-
         .publication-item {
             margin-bottom: 1.2rem;
             padding-left: 1rem;
             border-left: 3px solid var(--primary);
         }
-
         .pub-title {
             font-weight: 600;
             color: var(--text);
         }
-
         .pub-meta {
             font-size: 0.9rem;
             color: var(--text-muted);
@@ -231,7 +203,6 @@
                 <p><strong>Links:</strong> <a href="https://scholar.google.com/citations?user=JyjZ3EMAAAAJ&hl=en" target="_blank">Google Scholar</a> | <a href="https://www.linkedin.com/in/fikadu-dagefu-991a98a" target="_blank">LinkedIn</a></p>
             </div>
         </aside>
-
         <!-- MAIN CONTENT -->
         <main class="main-content">
             <!-- TABS -->
@@ -239,7 +210,6 @@
                 <button class="tab-link active" onclick="openTab(event, 'Home')">Home</button>
                 <button class="tab-link" onclick="openTab(event, 'Publications')">Publications</button>
             </nav>
-
             <!-- HOME TAB -->
             <div id="Home" class="tab-content active">
                 <h3>Research Overview</h3>
@@ -252,7 +222,6 @@
                     <li><strong>Wave Propagation and Channel Modeling:</strong> RF wave propagation modeling, Optical channel modeling, Empirical models</li>
                 </ul>
             </div>
-
             <!-- PUBLICATIONS TAB -->
             <div id="Publications" class="tab-content">
                 <h3>Journal Articles</h3>
@@ -383,268 +352,262 @@
                 <div class="publication-item">
                   [42] F. T. Dagefu and Kamal Sarabandi, "Analysis and Modeling of Near-Ground Wave Propagation in the Presence of Building Walls," <em>IEEE Trans. Antennas Propagat.</em>, vol. 59, no. 6, Apr. 2011. <a href="https://www.researchgate.net/search/publication?q=Analysis+and+Modeling+of+Near-Ground+Wave+Propagation+in+the+Presence+of+Building+Walls" target="_blank" style="margin-left: 8px; font-size: 0.85rem; font-weight: 600; color: var(--primary);">[PDF]</a>
                 </div>
-
                 <hr style="margin-top: 3rem; border: none; border-top: 1px dashed var(--border);">
-
                 <h3 style="margin-top: 1.5rem;">Conference Publications</h3>
-
                 <div class="publication-item">
-                    [1] S. Johnson, R. Aggarwal, M. Kasher, P. Spasojevic, J. Kong, B. Kim, J. Choi, and F. T. Dagefu, "Covert Multi-Hop LEO Routing Against Cyclic Feature Detectors via Controlled Delays," <em>IEEE Int. Conf. Comput. Commun. (INFOCOM) Workshops: Resilient and Intelligent Non-Terrestrial Networks, Tokyo, Japan, May 18-21, 2026, accepted.</em>
+                    \[1\] S. Johnson, R. Aggarwal, M. Kasher, P. Spasojevic, J. Kong, B. Kim, J. Choi, and F. T. Dagefu, "Covert Multi-Hop LEO Routing Against Cyclic Feature Detectors via Controlled Delays," <em>IEEE Int. Conf. Comput. Commun. (INFOCOM) Workshops: Resilient and Intelligent Non-Terrestrial Networks, Tokyo, Japan, May 18-21, 2026, accepted.</em>
                 </div>
                 <div class="publication-item">
-                    [2] S. Saha, R. Aggarwal, F. T. Dagefu, J. Kong, J. Choi, B. Kim, and P. Spasojevic, "Covert Routing with DSSS Signaling Against Cycle Detectors," <em>IEEE Wireless Communications and Networking Conf., Kuala Lumpur, Malaysia, Apr. 13-16, 2026, accepted.</em>
+                    \[2\] S. Saha, R. Aggarwal, F. T. Dagefu, J. Kong, J. Choi, B. Kim, and P. Spasojevic, "Covert Routing with DSSS Signaling Against Cycle Detectors," <em>IEEE Wireless Communications and Networking Conf., Kuala Lumpur, Malaysia, Apr. 13-16, 2026, accepted.</em>
                 </div>
                 <div class="publication-item">
-                    [3] J. Choi and F. T. Dagefu, "Cyclostationary Signature Reduction with an FM-DSSS Signal via RIS," <em>2026 IEEE APS/URSI (accepted).</em>
+                    \[3\] J. Choi and F. T. Dagefu, "Cyclostationary Signature Reduction with an FM-DSSS Signal via RIS," <em>2026 IEEE APS/URSI (accepted).</em>
                 </div>
                 <div class="publication-item">
-                    [4] Md Nahid H. Shuvo, M. Hossain, A. Mallik, J. N. Twigg, and F. T. Dagefu, "FLARE: A Wireless Side-Channel Fingerprinting Attack on Federated Learning," <em>2026 IEEE INFOCOM (Accepted).</em>
+                    \[4\] Md Nahid H. Shuvo, M. Hossain, A. Mallik, J. N. Twigg, and F. T. Dagefu, "FLARE: A Wireless Side-Channel Fingerprinting Attack on Federated Learning," <em>2026 IEEE INFOCOM (Accepted).</em>
                 </div>
                 <div class="publication-item">
-                    [5] A. Gillani, B. Lorenzo, M. Ghaderi, F. T. Dagefu, J. Kong, and D. Goeckel, "Optimal Routing and Link Configuration for Covert HetNets in the Presence of a Jammer," <em>2026 IEEE VTC (accepted, May 2026).</em>
+                    \[5\] A. Gillani, B. Lorenzo, M. Ghaderi, F. T. Dagefu, J. Kong, and D. Goeckel, "Optimal Routing and Link Configuration for Covert HetNets in the Presence of a Jammer," <em>2026 IEEE VTC (accepted, May 2026).</em>
                 </div>
                 <div class="publication-item">
-                    [6] Y. Wu, X. Xia, B. Lorenzo, D. Goeckel, and F. Dagefu, "Covertness Recovery in Multi-RAT UAV Swarms Under Post-Detection Threat Escalation via Lifelong Reinforcement Learning," <em>2026 IEEE VTC (accepted, May 15 2026).</em>
+                    \[6\] Y. Wu, X. Xia, B. Lorenzo, D. Goeckel, and F. Dagefu, "Covertness Recovery in Multi-RAT UAV Swarms Under Post-Detection Threat Escalation via Lifelong Reinforcement Learning," <em>2026 IEEE VTC (accepted, May 15 2026).</em>
                 </div>
                 <div class="publication-item">
-                    [7] T. Hassan, Kevin Chan, F. T. Dagefu, and F. Restuccia, “Multi-TAB: Multi-View Inference at the Edge with Resource-Aware Split Computing,” 27th IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks (WoWMoM), 2026 (Accepted).
+                    \[7\] T. Hassan, Kevin Chan, F. T. Dagefu, and F. Restuccia, “Multi-TAB: Multi-View Inference at the Edge with Resource-Aware Split Computing,” 27th IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks (WoWMoM), 2026 (Accepted).
                 </div>
                 <div class="publication-item">
-                    [8] H. Arslan, T. Moore, J. Kong, B. Kim, and F. Dagefu, “C-AODV: An Ad hoc On-Demand Distance Vector based Covert Routing in Heterogeneous Networks,” 2026 IEEE MILCOM (submitted, May 2026).
+                    \[8\] H. Arslan, T. Moore, J. Kong, B. Kim, and F. Dagefu, “C-AODV: An Ad hoc On-Demand Distance Vector based Covert Routing in Heterogeneous Networks,” 2026 IEEE MILCOM (submitted, May 2026).
                 </div>
                 <div class="publication-item">
-                    [9] B. Kim, J. Kong, T. Moore, and F. T. Dagefu, “Adversarial Attacks Against Deep Reinforcement Learning based Heterogeneous Wireless Routing," in IEEE Asilomar Conference on Signals, Systems, and Computers, 2026 (Submitted, May 2026).
+                    \[9\] B. Kim, J. Kong, T. Moore, and F. T. Dagefu, “Adversarial Attacks Against Deep Reinforcement Learning based Heterogeneous Wireless Routing," in IEEE Asilomar Conference on Signals, Systems, and Computers, 2026 (Submitted, May 2026).
                 </div>
                 <div class="publication-item">
-                    [10] A. Gillani, B. Lorenzo, F. T. Dagefu, J. H. Kong, and D. Goeckel, “Covert Multi-flow Routing in HetNets in the Presence of a Jammer,” 2026 IEEE MILCOM (submitted, May 2026).
+                    \[10\] A. Gillani, B. Lorenzo, F. T. Dagefu, J. H. Kong, and D. Goeckel, “Covert Multi-flow Routing in HetNets in the Presence of a Jammer,” 2026 IEEE MILCOM (submitted, May 2026).
                 </div>
                 <div class="publication-item">
-                    [11] B. Kim, J. Kong, T. J. Moore, and F. T. Dagefu, "Deep Reinforcement Learning Based Routing for Heterogeneous Multi-Hop Wireless Networks," <em>in Proc. IEEE Military Commun. Conf., Los Angeles, CA, USA, Oct. 6-10, 2025.</em>
+                    \[11\] B. Kim, J. Kong, T. J. Moore, and F. T. Dagefu, "Deep Reinforcement Learning Based Routing for Heterogeneous Multi-Hop Wireless Networks," <em>in Proc. IEEE Military Commun. Conf., Los Angeles, CA, USA, Oct. 6-10, 2025.</em>
                 </div>
                 <div class="publication-item">
-                    [12] K. Foysal Haque, J. Kong, T. Moore, F. Restuccia, and F. T. Dagefu, "DEER: Simultaneous Multi-Modal Decentralized Energy Efficient Covert Routing," <em>2025 IEEE Wireless Communications and Networking Conference.</em>
+                    \[12\] K. Foysal Haque, J. Kong, T. Moore, F. Restuccia, and F. T. Dagefu, "DEER: Simultaneous Multi-Modal Decentralized Energy Efficient Covert Routing," <em>2025 IEEE Wireless Communications and Networking Conference.</em>
                 </div>
                 <div class="publication-item">
-                    [13] B. Kim, J. Kong, T. J. Moore, and F. T. Dagefu, "Reinforcement Learning for Covert Heterogeneous Wireless Network Routing with a Threat Region," <em>2025 IEEE 22nd Consumer Communications & Networking Conference (CCNC).</em>
+                    \[13\] B. Kim, J. Kong, T. J. Moore, and F. T. Dagefu, "Reinforcement Learning for Covert Heterogeneous Wireless Network Routing with a Threat Region," <em>2025 IEEE 22nd Consumer Communications & Networking Conference (CCNC).</em>
                 </div>
                 <div class="publication-item">
-                    [14] R. Aggarwal, F. T. Dagefu, J. Kong, J. Choi, B. Kim, and P. Spasojevic, "On Covertness of DSSS Against Energy and Cycle Detectors under Link QoS Requirements," <em>IEEE Veh. Technol. Conf., Oslo, Norway, Jun. 17-20, 2025, presented. [Outcome of summer Internship at ARL]</em>
+                    \[14\] R. Aggarwal, F. T. Dagefu, J. Kong, J. Choi, B. Kim, and P. Spasojevic, "On Covertness of DSSS Against Energy and Cycle Detectors under Link QoS Requirements," <em>IEEE Veh. Technol. Conf., Oslo, Norway, Jun. 17-20, 2025, presented. \[Outcome of summer Internship at ARL\]</em>
                 </div>
                 <div class="publication-item">
-                    [15] J. Choi and F. T. Dagefu, "Analysis of Passive Jamming on MIMO Communications via Intelligent Reflecting Surfaces," <em>in 2025 IEEE APS/URSI, Ottawa, CA.</em>
+                    \[15\] J. Choi and F. T. Dagefu, "Analysis of Passive Jamming on MIMO Communications via Intelligent Reflecting Surfaces," <em>in 2025 IEEE APS/URSI, Ottawa, CA.</em>
                 </div>
                 <div class="publication-item">
-                    [16] A. Roknilamouki, F. T. Dagefu, E. Ekici, B. Kim, J. H. Kong, T. Moore, Y. Sun, and N. Shroff, "Safe and Reliable Deep Reinforcement Learning for Covert Routing," <em>2025 IEEE 22nd MASS (Invited).</em>
+                    \[16\] A. Roknilamouki, F. T. Dagefu, E. Ekici, B. Kim, J. H. Kong, T. Moore, Y. Sun, and N. Shroff, "Safe and Reliable Deep Reinforcement Learning for Covert Routing," <em>2025 IEEE 22nd MASS (Invited).</em>
                 </div>
                 <div class="publication-item">
-                    [17] A. Gillani, B. Lorenzo, M. Ghaderi, F. T. Dagefu, and D. Goeckel, "Optimal Link Configuration for Covert Heterogeneous Wireless Networks with Power Constraints," <em>2025 59th CISS.</em>
+                    \[17\] A. Gillani, B. Lorenzo, M. Ghaderi, F. T. Dagefu, and D. Goeckel, "Optimal Link Configuration for Covert Heterogeneous Wireless Networks with Power Constraints," <em>2025 59th CISS.</em>
                 </div>
                 <div class="publication-item">
-                    [18] A. Beyer, J. N. Twigg, N. Chopra, and F. T. Dagefu, "Accelerating Distributed Beamforming with the Frank-Wolfe Algorithm," <em>2025 IEEE 101st VTC2025-Spring.</em>
+                    \[18\] A. Beyer, J. N. Twigg, N. Chopra, and F. T. Dagefu, "Accelerating Distributed Beamforming with the Frank-Wolfe Algorithm," <em>2025 IEEE 101st VTC2025-Spring.</em>
                 </div>
                 <div class="publication-item">
-                    [19] R. Kozick and F. T. Dagefu, "Multiport Antenna Matching Network Design and Circuit Simplification," <em>in IEEE APS/URSI, Ottawa, CA.</em>
+                    \[19\] R. Kozick and F. T. Dagefu, "Multiport Antenna Matching Network Design and Circuit Simplification," <em>in IEEE APS/URSI, Ottawa, CA.</em>
                 </div>
                 <div class="publication-item">
-                    [20] F. G. Tisdall, S. B. Johnson, M. Kasher, F. T. Dagefu, J. Choi, J. Kong, B. Kim, and P. Spasojevic, "IRS-Enabled mmWave Signal Obfuscation for LEO Nanosatellites," <em>IEEE Military Commun. Conf., Los Angeles, CA, USA, Oct. 6-10, 2025 (Conference Best Demo Paper Winner).</em>
+                    \[20\] F. G. Tisdall, S. B. Johnson, M. Kasher, F. T. Dagefu, J. Choi, J. Kong, B. Kim, and P. Spasojevic, "IRS-Enabled mmWave Signal Obfuscation for LEO Nanosatellites," <em>IEEE Military Commun. Conf., Los Angeles, CA, USA, Oct. 6-10, 2025 (Conference Best Demo Paper Winner).</em>
                 </div>
                 <div class="publication-item">
-                    [21] J. Choi, M. Kasher, J. Kong, P. Spasojevic, and F. Dagefu, "Compact Three-Port Antenna Diversity Systems for Low Probability of Detection Communication," in <em>Proc. IEEE APS and ITNC-USNC-URSI Radio Science Meeting</em>, Florence, Italy, Jul. 14-19, 2024.
+                    \[21\] J. Choi, M. Kasher, J. Kong, P. Spasojevic, and F. Dagefu, "Compact Three-Port Antenna Diversity Systems for Low Probability of Detection Communication," in <em>Proc. IEEE APS and ITNC-USNC-URSI Radio Science Meeting</em>, Florence, Italy, Jul. 14-19, 2024.
                 </div>
                 <div class="publication-item">
-                    [22] M. Kasher, F. T. Dagefu, J. Choi, C. Koumpouzi, and P. Spasojevic, "Low Probability of Detection Communication via Polarization Diversity: An Experimental Study," <em>2024 USNC-URSI NRSM</em>, Boulder, CO, USA, 2024. [Outcome of summer Internship, also won 1st place winner of ARL summer student symposium].
+                    \[22\] M. Kasher, F. T. Dagefu, J. Choi, C. Koumpouzi, and P. Spasojevic, "Low Probability of Detection Communication via Polarization Diversity: An Experimental Study," <em>2024 USNC-URSI NRSM</em>, Boulder, CO, USA, 2024. \[Outcome of summer Internship, also won 1st place winner of ARL summer student symposium\].
                 </div>
                 <div class="publication-item">
-                    [23] R. Aggarwal, J. Kong, F. T. Dagefu, T. J. Moore, J. Choi, and P. Spasojevic, "Covert Communications with Simultaneous Multi-Modal Transmission," in <em>Proc. ACM Conference on Security and Privacy in Wireless and Mobile Networks,</em> Seoul, Korea, May 27-30, 2024.
+                    \[23\] R. Aggarwal, J. Kong, F. T. Dagefu, T. J. Moore, J. Choi, and P. Spasojevic, "Covert Communications with Simultaneous Multi-Modal Transmission," in <em>Proc. ACM Conference on Security and Privacy in Wireless and Mobile Networks,</em> Seoul, Korea, May 27-30, 2024.
                 </div>
                 <div class="publication-item">
-                    [24] J. Kong and F. T. Dagefu, "Covert Communication With a Ginibre Field of Interferers," in <em>Proc. IEEE Wireless Commun. and Netw. Conf.,</em> Dubai, United Arab Emirates, Apr. 21-24, 2024.
+                    \[24\] J. Kong and F. T. Dagefu, "Covert Communication With a Ginibre Field of Interferers," in <em>Proc. IEEE Wireless Commun. and Netw. Conf.,</em> Dubai, United Arab Emirates, Apr. 21-24, 2024.
                 </div>
                 <div class="publication-item">
-                    [25] S. Johnson, M. Kasher, R. Aggarwal, J. Callinan, P. Spasojevic, F. T. Dagefu, J. Kong, J. Choi, and B. Kim, "Experimental Analysis of Covert CDMA Against Energy and Cycle Detecting Adversaries," in Proc. IEEE Military Commun. Conf., Washington, DC, USA, Oct. 28-Nov. 1, 2024.
+                    \[25\] S. Johnson, M. Kasher, R. Aggarwal, J. Callinan, P. Spasojevic, F. T. Dagefu, J. Kong, J. Choi, and B. Kim, "Experimental Analysis of Covert CDMA Against Energy and Cycle Detecting Adversaries," in Proc. IEEE Military Commun. Conf., Washington, DC, USA, Oct. 28-Nov. 1, 2024.
                 </div>
                 <div class="publication-item">
-                    [26] B. Kim, J. Kong, T. Moore, and F. T. Dagefu, “Reinforcement Learning Based Covert Routing with Node Failure Resiliency for Heterogeneous Networks,” in Proc. IEEE MILCOM, 2024
+                    \[26\] B. Kim, J. Kong, T. Moore, and F. T. Dagefu, “Reinforcement Learning Based Covert Routing with Node Failure Resiliency for Heterogeneous Networks,” in Proc. IEEE MILCOM, 2024
                 </div>
                 <div class="publication-item">
-                    [27] M. H. Ashik, M. Hossain, J. N. Twigg, and F. T. Dagefu, “Phantom Guard: An MDP-Based Anti-Jamming Defense Strategy for Military 5G Networks,” in Proc. IEEE MILCOM, 2024.
+                    \[27\] M. H. Ashik, M. Hossain, J. N. Twigg, and F. T. Dagefu, “Phantom Guard: An MDP-Based Anti-Jamming Defense Strategy for Military 5G Networks,” in Proc. IEEE MILCOM, 2024.
                 </div>
                 <div class="publication-item">
-                    [28] R. J. Kozick, F. T. Dagefu, B. M. Sadler, and J. Kong, "Distributed Antenna Arrays for Simultaneous Nulling and Sectorized Jamming," IEEE APS/URSI, Florence, Italy (2024).
+                    \[28\] R. J. Kozick, F. T. Dagefu, B. M. Sadler, and J. Kong, "Distributed Antenna Arrays for Simultaneous Nulling and Sectorized Jamming," IEEE APS/URSI, Florence, Italy (2024).
                 </div>
                 <div class="publication-item">
-                    [29] R. J. Kozick, F. T. Dagefu, B. M. Sadler, and J. Kong, "Nulling and Sectorized Jamming with Distributed Compact Antenna Arrays," in Proc. IEEE International Symposium on Antenna and Propagation and ITNC-USNC-URSI Radio Science Meeting, Florence, Italy, Jul. 14-19, 2024.
+                    \[29\] R. J. Kozick, F. T. Dagefu, B. M. Sadler, and J. Kong, "Nulling and Sectorized Jamming with Distributed Compact Antenna Arrays," in Proc. IEEE International Symposium on Antenna and Propagation and ITNC-USNC-URSI Radio Science Meeting, Florence, Italy, Jul. 14-19, 2024.
                 </div>
                 <div class="publication-item">
-                    [30] C. H. Arslan, F. T. Dagefu, J. N. Twigg, and T. J. Moore, “Non-line-of-sight ranging via ultraviolet signals,” 2023 IEEE MILCOM.
+                    \[30\] C. H. Arslan, F. T. Dagefu, J. N. Twigg, and T. J. Moore, “Non-line-of-sight ranging via ultraviolet signals,” 2023 IEEE MILCOM.
                 </div>
                 <div class="publication-item">
-                    [31] M. J. Grabner, F. T. Dagefu, J. N. Twigg, B. Azimi-Sadjadi, and B. M. Sadler, “Calibration of multi-robot coherent beamforming,” 2023 IEEE MILCOM.
+                    \[31\] M. J. Grabner, F. T. Dagefu, J. N. Twigg, B. Azimi-Sadjadi, and B. M. Sadler, “Calibration of multi-robot coherent beamforming,” 2023 IEEE MILCOM.
                 </div>
                 <div class="publication-item">
-                    [32] T. J. Moore, F. T. Dagefu, C. H. Arslan, M. J. Weisman, and R. J. Drost, “Range estimation of an ultraviolet communication source using a mobile sensor,” 2023 IEEE Wireless Communications and Networking Conference (WCNC).
+                    \[32\] T. J. Moore, F. T. Dagefu, C. H. Arslan, M. J. Weisman, and R. J. Drost, “Range estimation of an ultraviolet communication source using a mobile sensor,” 2023 IEEE Wireless Communications and Networking Conference (WCNC).
                 </div>
                 <div class="publication-item">
-                    [33] R. Kozick, F. T. Dagefu, and B. M. Sadler, “Performance metrics for biomimetic antenna array (BMAA) systems,” 2023 IEEE International Symposium on Antennas and Propagation and USNC-URSI Radio Science Meeting (USNC-URSI).
+                    \[33\] R. Kozick, F. T. Dagefu, and B. M. Sadler, “Performance metrics for biomimetic antenna array (BMAA) systems,” 2023 IEEE International Symposium on Antennas and Propagation and USNC-URSI Radio Science Meeting (USNC-URSI).
                 </div>
                 <div class="publication-item">
-                    [34] B. Woosley, J. Twigg, J. G. Rogers, and F. T. Dagefu, "Learning Antenna Radiation Patterns Through Gaussian Process Regression," 2022 IEEE International Symposium on Antennas and Propagation and USNC-URSI Radio Science Meeting (AP-S/URSI), Denver, CO, USA, 2022.
+                    \[34\] B. Woosley, J. Twigg, J. G. Rogers, and F. T. Dagefu, "Learning Antenna Radiation Patterns Through Gaussian Process Regression," 2022 IEEE International Symposium on Antennas and Propagation and USNC-URSI Radio Science Meeting (AP-S/URSI), Denver, CO, USA, 2022.
                 </div>
                 <div class="publication-item">
-                    [35] J. Kong, F. T. Dagefu, J. Choi, P. Spasojevic, and C. Koumpouzi, "Covert Communications in Low-VHF/Microwave Heterogeneous Networks," in Proc. IEEE Wireless Commun. and Netw. Conf., Austin, TX, USA, Apr. 10-13, 2022.
+                    \[35\] J. Kong, F. T. Dagefu, J. Choi, P. Spasojevic, and C. Koumpouzi, "Covert Communications in Low-VHF/Microwave Heterogeneous Networks," in Proc. IEEE Wireless Commun. and Netw. Conf., Austin, TX, USA, Apr. 10-13, 2022.
                 </div>
                 <div class="publication-item">
-                    [36] K. Chakrabarti, A. Bedi, F. T. Dagefu, J. Twigg, and N. Chopra, “Fast distributed beamforming without receiver feedback," in IEEE Asilomar Conference on Signals, Systems, and Computers, October, 2022.
+                    \[36\] K. Chakrabarti, A. Bedi, F. T. Dagefu, J. Twigg, and N. Chopra, “Fast distributed beamforming without receiver feedback," in IEEE Asilomar Conference on Signals, Systems, and Computers, October, 2022.
                 </div>
                 <div class="publication-item">
-                    [37] J. Choi and F. T. Dagefu, "A Low-Profile Three-Port Antenna for Compact Polarization and Pattern Diversity Systems," 2021 IEEE APS and USNC-URSI Radio Science Meeting (APS/URSI), Dec. 2021.
+                    \[37\] J. Choi and F. T. Dagefu, "A Low-Profile Three-Port Antenna for Compact Polarization and Pattern Diversity Systems," 2021 IEEE APS and USNC-URSI Radio Science Meeting (APS/URSI), Dec. 2021.
                 </div>
                 <div class="publication-item">
-                    [38] C. Koumpouzi, F. T. Dagefu, J. Kong, and P. Spasojevic, "On the Analytical Communication Performance of LPD QS-CDMA with Reduced Cyclostationary Characteristics," in <em>Proc. IEEE Asilomar Conf. Signals, Systems, and Computes</em>, Pacific Grove, CA, USA, Oct. 31-Nov.3, 2021.
+                    \[38\] C. Koumpouzi, F. T. Dagefu, J. Kong, and P. Spasojevic, "On the Analytical Communication Performance of LPD QS-CDMA with Reduced Cyclostationary Characteristics," in <em>Proc. IEEE Asilomar Conf. Signals, Systems, and Computes</em>, Pacific Grove, CA, USA, Oct. 31-Nov.3, 2021.
                 </div>
                 <div class="publication-item">
-                    [39] K. Sabet, A. I. Stefan, K. Sarabandi, F. T. Dagefu, and B. M. Sadler, "Highly Parallelized Hybrid FDTD Solver for Simulating Electromagnetic Wave Propagation in Dense Urban Environments," 2021 IEEE APS and USNC-URSI Radio Science Meeting (APS/URSI), Dec. 2021.
+                    \[39\] K. Sabet, A. I. Stefan, K. Sarabandi, F. T. Dagefu, and B. M. Sadler, "Highly Parallelized Hybrid FDTD Solver for Simulating Electromagnetic Wave Propagation in Dense Urban Environments," 2021 IEEE APS and USNC-URSI Radio Science Meeting (APS/URSI), Dec. 2021.
                 </div>
                 <div class="publication-item">
-                    [40] J. Kong, F. T. Dagefu, and B. M. Sadler, "Simultaneous Beamforming and Nullforming for Covert Wireless Communications," in Proc. IEEE Veh. Technol. Conf., Virtual Conference, May 25-Jul. 31, 2020.
+                    \[40\] J. Kong, F. T. Dagefu, and B. M. Sadler, "Simultaneous Beamforming and Nullforming for Covert Wireless Communications," in Proc. IEEE Veh. Technol. Conf., Virtual Conference, May 25-Jul. 31, 2020.
                 </div>
                 <div class="publication-item">
-                    [41] J. Kong, F. T. Dagefu, and B. M. Sadler, "Performance Analysis of Distributed Beamforming With Random Phase Offsets," in Proc. IEEE Wireless Commun. and Netw. Conf., Virtual Conference, May 25-28, 2020.
+                    \[41\] J. Kong, F. T. Dagefu, and B. M. Sadler, "Performance Analysis of Distributed Beamforming With Random Phase Offsets," in Proc. IEEE Wireless Commun. and Netw. Conf., Virtual Conference, May 25-28, 2020.
                 </div>
                 <div class="publication-item">
-                    [42] J. Choi and F. T. Dagefu, “A Miniature High-Gain Low-VHF Antenna," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., July 2020.
+                    \[42\] J. Choi and F. T. Dagefu, “A Miniature High-Gain Low-VHF Antenna," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., July 2020.
                 </div>
                 <div class="publication-item">
-                    [43] J. Choi, F. T. Dagefu, and B. M. Sadler, “An Efficient Low Profile Low-VHF Antenna for Small Unmanned Ground Vehicles," EuCAP 2020, May 2020.
+                    \[43\] J. Choi, F. T. Dagefu, and B. M. Sadler, “An Efficient Low Profile Low-VHF Antenna for Small Unmanned Ground Vehicles," EuCAP 2020, May 2020.
                 </div>
                 <div class="publication-item">
-                    [44] C. Pfeiffer and F. T. Dagefu, “Generalized Approach to Array Mutual Coupling Compensation of Single Mode Elements," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., July 2020.
+                    \[44\] C. Pfeiffer and F. T. Dagefu, “Generalized Approach to Array Mutual Coupling Compensation of Single Mode Elements," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., July 2020.
                 </div>
                 <div class="publication-item">
-                    [45] R. J. Kozick, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, "Four-port Coupling Network Design for a Two-Element Biomimetic Antenna Array," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., July 2020.
+                    \[45\] R. J. Kozick, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, "Four-port Coupling Network Design for a Two-Element Biomimetic Antenna Array," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., July 2020.
                 </div>
                 <div class="publication-item">
-                    [46] R. J. Kozick, F. T. Dagefu, and B. M. Sadler, “Two-Element Biomimetic Antenna Array Design for Power Extraction/Phase Amplification Tradeoff," EuCAP 2020, May 2020.
+                    \[46\] R. J. Kozick, F. T. Dagefu, and B. M. Sadler, “Two-Element Biomimetic Antenna Array Design for Power Extraction/Phase Amplification Tradeoff," EuCAP 2020, May 2020.
                 </div>
                 <div class="publication-item">
-                    [47] R. J. Kozick, F. T. Dagefu, and B. M. Sadler, “Two-Element Biomimetic Antenna Array Design and Performance," IEEE ICASSP 2020, May 2020.
+                    \[47\] R. J. Kozick, F. T. Dagefu, and B. M. Sadler, “Two-Element Biomimetic Antenna Array Design and Performance," IEEE ICASSP 2020, May 2020.
                 </div>
                 <div class="publication-item">
-                    [48] R. Ma, F. T. Dagefu, and N. Behdad, “A compact, Broadband, Multi-Beam VHF/UHF Antenna Array for Directional Networking Applications," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Atlanta, GA, July 2020.
+                    \[48\] R. Ma, F. T. Dagefu, and N. Behdad, “A compact, Broadband, Multi-Beam VHF/UHF Antenna Array for Directional Networking Applications," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Atlanta, GA, July 2020.
                 </div>
                 <div class="publication-item">
-                    [49] F. T. Dagefu, J. Twigg, C. R. Rao, and B. M. Sadler, “Directional Communication Enabled by Mobile Parasitic Elements" International Conf. Military Comms. Info. Systems, Budva, Montenegro, May 2019 (<strong>Received conference best paper award</strong>).
+                    \[49\] F. T. Dagefu, J. Twigg, C. R. Rao, and B. M. Sadler, “Directional Communication Enabled by Mobile Parasitic Elements" International Conf. Military Comms. Info. Systems, Budva, Montenegro, May 2019 (<strong>Received conference best paper award</strong>).
                 </div>
                 <div class="publication-item">
-                    [50] C. Koumpouzi, P. Spasojevic, and F. T. Dagefu, "Performance Analysis of Signal Pattern Reducing Techniques for Low Probability of Detection," 2019 IEEE 90th Vehicular Technology Conference (VTC2019-Fall), Honolulu, HI, USA, 2019. [Outcome of ARL 10-month internship].
+                    \[50\] C. Koumpouzi, P. Spasojevic, and F. T. Dagefu, "Performance Analysis of Signal Pattern Reducing Techniques for Low Probability of Detection," 2019 IEEE 90th Vehicular Technology Conference (VTC2019-Fall), Honolulu, HI, USA, 2019. \[Outcome of ARL 10-month internship\].
                 </div>
                 <div class="publication-item">
-                    [51] C. Koumpouzi, P. Spasojevic, and F. T. Dagefu, "Low Probability of Detection QS-MC-DS-CDMA for Low VHF," 2019 International Conference on Military Communications and Information Systems (ICMCIS), Budva, Montenegro, 2019. [Outcome of ARL 10-month internship].
+                    \[51\] C. Koumpouzi, P. Spasojevic, and F. T. Dagefu, "Low Probability of Detection QS-MC-DS-CDMA for Low VHF," 2019 International Conference on Military Communications and Information Systems (ICMCIS), Budva, Montenegro, 2019. \[Outcome of ARL 10-month internship\].
                 </div>
                 <div class="publication-item">
-                    [52] C. R. Rao, F. T. Dagefu, G. Verma, and P. Spasojevic, “Node Recruitment in Loosely-Synchronized Scalable Networks with Sporadic Transmission," IEEE Fusion Conference, Ottawa, Canada, July 2019 [Outcome of a 4-month internship at ARL].
+                    \[52\] C. R. Rao, F. T. Dagefu, G. Verma, and P. Spasojevic, “Node Recruitment in Loosely-Synchronized Scalable Networks with Sporadic Transmission," IEEE Fusion Conference, Ottawa, Canada, July 2019 \[Outcome of a 4-month internship at ARL\].
                 </div>
                 <div class="publication-item">
-                    [53] J. N. Twigg, F. T. Dagefu, N. Chopra, and B. M. Sadler, “Robotic Parasitic Array Optimization in Outdoor Environments," in IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR), Sep. 2019.
+                    \[53\] J. N. Twigg, F. T. Dagefu, N. Chopra, and B. M. Sadler, “Robotic Parasitic Array Optimization in Outdoor Environments," in IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR), Sep. 2019.
                 </div>
                 <div class="publication-item">
-                    [54] C. H. Arslan, F. T. Dagefu, M. J. Weisman, and R. J. Drost, “Channel Model Validation for and Extensions of an Ultraviolet Networking Optimization Framework" in IEEE Veh. Tech. Conf.", Sep. 2019.
+                    \[54\] C. H. Arslan, F. T. Dagefu, M. J. Weisman, and R. J. Drost, “Channel Model Validation for and Extensions of an Ultraviolet Networking Optimization Framework" in IEEE Veh. Tech. Conf.", Sep. 2019.
                 </div>
                 <div class="publication-item">
-                    [55] R. J. Drost, M. J. Weisman, F. T. Dagefu, and C. H. Arslan, “A Low-Complexity Approach to UV Communication Channel Model Evaluation" in International Conf. Military Comms. Info. Systems, Budva, Montenegro, May 2019.
+                    \[55\] R. J. Drost, M. J. Weisman, F. T. Dagefu, and C. H. Arslan, “A Low-Complexity Approach to UV Communication Channel Model Evaluation" in International Conf. Military Comms. Info. Systems, Budva, Montenegro, May 2019.
                 </div>
                 <div class="publication-item">
-                    [56] M. Ranjabar Nikkhah, F. T. Dagefu, and N. Behdad, “A Compact Platform-Based Antenna for an Unmanned Ground Vehicle," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Atlanta, GA, July 2019.
+                    \[56\] M. Ranjabar Nikkhah, F. T. Dagefu, and N. Behdad, “A Compact Platform-Based Antenna for an Unmanned Ground Vehicle," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Atlanta, GA, July 2019.
                 </div>
                 <div class="publication-item">
-                    [57] M. Calvo-Fullana, F. T. Dagefu, and B. M. Sadler, "Multi-mode Autonomous Communication Systems," 2019 IEEE Asilomar conf. on signals, Systems, and Computers.
+                    \[57\] M. Calvo-Fullana, F. T. Dagefu, and B. M. Sadler, "Multi-mode Autonomous Communication Systems," 2019 IEEE Asilomar conf. on signals, Systems, and Computers.
                 </div>
                 <div class="publication-item">
-                    [58] C. Pfeiffer and F. T. Dagefu, “A Compact Electrically Tunable VHF Antenna," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Atlanta, GA, July 2019.
+                    \[58\] C. Pfeiffer and F. T. Dagefu, “A Compact Electrically Tunable VHF Antenna," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Atlanta, GA, July 2019.
                 </div>
                 <div class="publication-item">
-                    [59] Z. Tang, P. Spasojevic, C. Koumpouzi, and F. T. Dagefu, "Simultaneous Synchronization and Detection in Loosely Synchronized Tiny Packet Networks," 2019 IEEE 40th Sarnoff Symposium, Newark, NJ, USA, 2019.
+                    \[59\] Z. Tang, P. Spasojevic, C. Koumpouzi, and F. T. Dagefu, "Simultaneous Synchronization and Detection in Loosely Synchronized Tiny Packet Networks," 2019 IEEE 40th Sarnoff Symposium, Newark, NJ, USA, 2019.
                 </div>
                 <div class="publication-item">
-                    [60] G. Verma, F. T. Dagefu, B. M. Sadler, J. Twigg, and J. Fink, “DOA Estimation for Autonomous Systems in Complex Propagation Environments," in Proc. 2018 IEEE Int. Workshop on Signal Proc. Advances in Wireless Comms. (SPAWC), Kalamata, Greece, May 2018.
+                    \[60\] G. Verma, F. T. Dagefu, B. M. Sadler, J. Twigg, and J. Fink, “DOA Estimation for Autonomous Systems in Complex Propagation Environments," in Proc. 2018 IEEE Int. Workshop on Signal Proc. Advances in Wireless Comms. (SPAWC), Kalamata, Greece, May 2018.
                 </div>
                 <div class="publication-item">
-                    [61] J. Choi, C. Rao, and F. T. Dagefu, “Real-Time Digital Video Streaming at Low-VHF for Compact Autonomous Agents in Complex Scenes," in IEEE Veh. Tech. Conf., Kuala Lumpur, Malaysia, May 2019.
+                    \[61\] J. Choi, C. Rao, and F. T. Dagefu, “Real-Time Digital Video Streaming at Low-VHF for Compact Autonomous Agents in Complex Scenes," in IEEE Veh. Tech. Conf., Kuala Lumpur, Malaysia, May 2019.
                 </div>
                 <div class="publication-item">
-                    [62] C. Rao, F. T. Dagefu, G. Verma, P. Spasojevic, and B. M. Sadler, “Scalable Sporadic Medium Access for Complex Propagation Environments," in IEEE 29th Int. Symp. On Personal, Indoor, and Mobile Radio Comms (PIMRC), Bologna, Italy, Sep. 2018.
+                    \[62\] C. Rao, F. T. Dagefu, G. Verma, P. Spasojevic, and B. M. Sadler, “Scalable Sporadic Medium Access for Complex Propagation Environments," in IEEE 29th Int. Symp. On Personal, Indoor, and Mobile Radio Comms (PIMRC), Bologna, Italy, Sep. 2018.
                 </div>
                 <div class="publication-item">
-                    [63] J. Choi, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “Bandwidth Enhanced Low-VHF Communications with a Miniature Non-Foster Antenna," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Boston, MA, July 2018.
+                    \[63\] J. Choi, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “Bandwidth Enhanced Low-VHF Communications with a Miniature Non-Foster Antenna," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Boston, MA, July 2018.
                 </div>
                 <div class="publication-item">
-                    [64] F. T. Dagefu, J. Oh, J. Choi, and K. Sarabandi, “The effect of inter-user delay and channel phase response on MC-CDMA using WBE codes with application to lower VHF," in IEEE Asilomar Conf. on Signals, Systems, and Computers, Pacific Grove, CA, Nov. 2017.
+                    \[64\] F. T. Dagefu, J. Oh, J. Choi, and K. Sarabandi, “The effect of inter-user delay and channel phase response on MC-CDMA using WBE codes with application to lower VHF," in IEEE Asilomar Conf. on Signals, Systems, and Computers, Pacific Grove, CA, Nov. 2017.
                 </div>
                 <div class="publication-item">
-                    [65] F. T. Dagefu, G. Verma, B. M. Sadler, R. Kozick, and K. Sarabandi, “Full-wave analysis of time-of-arrival based localization with polarization diversity," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., San Diego, CA, July 2017.
+                    \[65\] F. T. Dagefu, G. Verma, B. M. Sadler, R. Kozick, and K. Sarabandi, “Full-wave analysis of time-of-arrival based localization with polarization diversity," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., San Diego, CA, July 2017.
                 </div>
                 <div class="publication-item">
-                    [66] F. T. Dagefu, G. Verma, P. Spasojevic, and B. M. Sadler, “An experimental study of quasisynchronous multiuser communications in cluttered scenarios at low VHF," in International Conf. Military Comms. Info. Systems, Oulu, Finland, May 2017.
+                    \[66\] F. T. Dagefu, G. Verma, P. Spasojevic, and B. M. Sadler, “An experimental study of quasisynchronous multiuser communications in cluttered scenarios at low VHF," in International Conf. Military Comms. Info. Systems, Oulu, Finland, May 2017.
                 </div>
                 <div class="publication-item">
-                    [67] G. Verma, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “Localization via the received signal strength gradient at lower VHF," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., San Diego, CA, July 2017.
+                    \[67\] G. Verma, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “Localization via the received signal strength gradient at lower VHF," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., San Diego, CA, July 2017.
                 </div>
                 <div class="publication-item">
-                    [68] J. Choi, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “A Non-Foster matched dipole for a low-VHF mobile transmitter systems" in Proc. IEEE Int. Ant. & Prop. & URSI Symp., San Diego, CA, July 2017.
+                    \[68\] J. Choi, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “A Non-Foster matched dipole for a low-VHF mobile transmitter systems" in Proc. IEEE Int. Ant. & Prop. & URSI Symp., San Diego, CA, July 2017.
                 </div>
                 <div class="publication-item">
-                    [69] G. Verma, F. T. Dagefu, P. Spasojevic, and B. M. Sadler, "Implications of time and frequency synchronization tradeoff of quasi-synchronous multi-carrier DS-CDMA for robust communications at lower VHF" in IEEE MILCOM, Baltimore, MD, May 2016.
+                    \[69\] G. Verma, F. T. Dagefu, P. Spasojevic, and B. M. Sadler, "Implications of time and frequency synchronization tradeoff of quasi-synchronous multi-carrier DS-CDMA for robust communications at lower VHF" in IEEE MILCOM, Baltimore, MD, May 2016.
                 </div>
                 <div class="publication-item">
-                    [70] G. Verma, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “Direction of arrival estimation with the received signal strength gradient at the lower VHF band," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Fajardo, Puerto Rico, July 2016.
+                    \[70\] G. Verma, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “Direction of arrival estimation with the received signal strength gradient at the lower VHF band," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Fajardo, Puerto Rico, July 2016.
                 </div>
                 <div class="publication-item">
-                    [71] J. Choi, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “A compact, low-power, low-VHF radio for mobile and wireless communication applications," in in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Fajardo, Puerto Rico, July 2016.
+                    \[71\] J. Choi, F. T. Dagefu, B. M. Sadler, and K. Sarabandi, “A compact, low-power, low-VHF radio for mobile and wireless communication applications," in in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Fajardo, Puerto Rico, July 2016.
                 </div>
                 <div class="publication-item">
-                    [72] F. T. Dagefu, G. Verma, B. M. Sadler, and K. Sarabandi, “Empirical and Simulation based Analysis of Propagation Mechanisms at Low Frequencies," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Fajardo, Puerto Rico, July 2016.
+                    \[72\] F. T. Dagefu, G. Verma, B. M. Sadler, and K. Sarabandi, “Empirical and Simulation based Analysis of Propagation Mechanisms at Low Frequencies," in Proc. IEEE Int. Ant. and Prop. & URSI Symp., Fajardo, Puerto Rico, July 2016.
                 </div>
                 <div class="publication-item">
-                    [73] G. Verma, F. T. Dagefu, B. M. Sadler, and P. Spasojevic, “Quasi-Synchronous Multi-Carrier DS-CDMA Multi-user Communications for Lower VHF" Milcom 2016, Baltimore, MD.
+                    \[73\] G. Verma, F. T. Dagefu, B. M. Sadler, and P. Spasojevic, “Quasi-Synchronous Multi-Carrier DS-CDMA Multi-user Communications for Lower VHF" Milcom 2016, Baltimore, MD.
                 </div>
                 <div class="publication-item">
-                    [74] F. T. Dagefu, G. Verma, C. R. Rao, P. L. Yu, B. M. Sadler, and K. Sarabandi, “Measurement and Characterization of the short-range low-VHF channel" in IEEE Wireless Comms. & Networking Conference (WCNC), New Orleans, LA, Mar. 2015.
+                    \[74\] F. T. Dagefu, G. Verma, C. R. Rao, P. L. Yu, B. M. Sadler, and K. Sarabandi, “Measurement and Characterization of the short-range low-VHF channel" in IEEE Wireless Comms. & Networking Conference (WCNC), New Orleans, LA, Mar. 2015.
                 </div>
                 <div class="publication-item">
-                    [75] F. T. Dagefu, G. Verma, R. J. Kozick, B. M. Sadler, and K. Sarabandi, “Short range lower VHF channel study using full-wave simulations and measurements," in USNC-URSI Radio Science Meeting, Vancouver, Canada, July 2015.
+                    \[75\] F. T. Dagefu, G. Verma, R. J. Kozick, B. M. Sadler, and K. Sarabandi, “Short range lower VHF channel study using full-wave simulations and measurements," in USNC-URSI Radio Science Meeting, Vancouver, Canada, July 2015.
                 </div>
                 <div class="publication-item">
-                    [76] F. T. Dagefu, J. Oh, J. Choi, and K. Sarabandi, “Performance Analysis of a Common Aperture Antenna Diversity System," in <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Lake Buena Vista, FL, July 2013.
+                    \[76\] F. T. Dagefu, J. Oh, J. Choi, and K. Sarabandi, “Performance Analysis of a Common Aperture Antenna Diversity System," in <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Lake Buena Vista, FL, July 2013.
                 </div>
                 <div class="publication-item">
-                    [77] F. T. Dagefu and K. Sarabandi, “An Efficient Indoor Wave Propagation Model for Analysis of near-Ground Radiation Diversity Antennas," <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Chicago, IL, July 2012.
+                    \[77\] F. T. Dagefu and K. Sarabandi, “An Efficient Indoor Wave Propagation Model for Analysis of near-Ground Radiation Diversity Antennas," <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Chicago, IL, July 2012.
                 </div>
                 <div class="publication-item">
-                    [78] F. T. Dagefu and K. Sarabandi, “A Sub-wavelength RF Source Tracking Device for GPS-denied Environments," <em>USNC-URSI National Radio Science Meeting</em>, Boulder, Co, Jan. 2012.
+                    \[78\] F. T. Dagefu and K. Sarabandi, “A Sub-wavelength RF Source Tracking Device for GPS-denied Environments," <em>USNC-URSI National Radio Science Meeting</em>, Boulder, Co, Jan. 2012.
                 </div>
                 <div class="publication-item">
-                    [79] F. T. Dagefu and K. Sarabandi, “A 3D subsurface imaging technique based on distributed nearground sensors: Investigation using scale model measurements," <em>IEEE Geoscience & Remote Sensing Symp.</em>, Vancouver, Canada, July 2011.
+                    \[79\] F. T. Dagefu and K. Sarabandi, “A 3D subsurface imaging technique based on distributed nearground sensors: Investigation using scale model measurements," <em>IEEE Geoscience & Remote Sensing Symp.</em>, Vancouver, Canada, July 2011.
                 </div>
                 <div class="publication-item">
-                    [80] F. T. Dagefu, J. Oh, and K. Sarabandi,“Numerical and Experimental Investigation of Source Tracking in Multipath Environments," in <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Spokane, WA, July 2011.
+                    \[80\] F. T. Dagefu, J. Oh, and K. Sarabandi,“Numerical and Experimental Investigation of Source Tracking in Multipath Environments," in <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Spokane, WA, July 2011.
                 </div>
                 <div class="publication-item">
-                    [81] F. T. Dagefu and K. Sarabandi, “Simulation and measurement of near-ground wave propagation for indoor Scenarios," in <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Toronto, Ontario, Canada, July 2010.
+                    \[81\] F. T. Dagefu and K. Sarabandi, “Simulation and measurement of near-ground wave propagation for indoor Scenarios," in <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Toronto, Ontario, Canada, July 2010.
                 </div>
                 <div class="publication-item">
-                    [82] F. T. Dagefu and K. Sarabandi,“Soil dielectric and senisitivity analysis for subsurface imaging applications based on distributed Sensor Networks," <em>IEEE Geoscience & Remote Sensing Symp.</em>, Honolulu, Hawaii, July 2010.
+                    \[82\] F. T. Dagefu and K. Sarabandi,“Soil dielectric and senisitivity analysis for subsurface imaging applications based on distributed Sensor Networks," <em>IEEE Geoscience & Remote Sensing Symp.</em>, Honolulu, Hawaii, July 2010.
                 </div>
                 <div class="publication-item">
-                    [83] F. T. Dagefu and K. Sarabandi, “High resolution subsurface imaging of deep targets based on distributed sensor networks," <em>IEEE Geoscience & Remote Sensing Symp.</em>, Cape town, South Africa, July 2009.
+                    \[83\] F. T. Dagefu and K. Sarabandi, “High resolution subsurface imaging of deep targets based on distributed sensor networks," <em>IEEE Geoscience & Remote Sensing Symp.</em>, Cape town, South Africa, July 2009.
                 </div>
                 <div class="publication-item">
-                    [84] F. T. Dagefu, D. Liao, and K. Sarabandi, “An Efficient model for near-ground wave propagation in the presence of building walls and indoor obstacles," in <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Charleston, SC, June 2009.
+                    \[84\] F. T. Dagefu, D. Liao, and K. Sarabandi, “An Efficient model for near-ground wave propagation in the presence of building walls and indoor obstacles," in <em>Proc. IEEE Int. Ant. and Prop. & URSI Symp.</em>, Charleston, SC, June 2009.
                 </div>
-
                 <hr style="margin-top: 3rem; border: none; border-top: 1px dashed var(--border);">
-
                 <h3 style="margin-top: 1.5rem;">Patents</h3>
-
                 <div class="publication-item">
                     <div class="pub-title">"Covert communication technique for intelligent reflecting surface-assisted wireless networks with a friendly jammer"</div>
                     <div class="pub-meta">U.S. Patent App No. 18/794,370 | Issued: 2026</div>
@@ -668,7 +631,6 @@
             </div>
         </main>
     </div>
-
     <!-- JavaScript for Tabs -->
     <script>
         function openTab(evt, tabName) {
